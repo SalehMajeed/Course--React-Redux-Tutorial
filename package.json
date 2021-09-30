@@ -1,0 +1,23 @@
+{
+  "name": "react-reducx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalehMajeed/Course--React-Redux-Tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalehMajeed/Course--React-Redux-Tutorial/issues"
+  },
+  "homepage": "https://github.com/SalehMajeed/Course--React-Redux-Tutorial#readme",
+  "dependencies": {
+    "redux": "^4.1.1"
+  }
+}
