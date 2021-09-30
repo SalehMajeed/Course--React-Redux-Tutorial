@@ -2,16 +2,25 @@ const redux = require('redux');
 const createStore = redux.createStore;
 
 const BUY_CAKE = 'BUY_CAKE';
+const BUY_ICECREAM = 'BUY_ICECREAM';
 
 function buyCake() {
 	return {
 		type: BUY_CAKE,
-		info: 'First Redux Action',
+		info: 'buy cake',
+	};
+}
+
+function buyIceCream() {
+	return {
+		type: BUY_ICECREAM,
+		info: 'Ice cream',
 	};
 }
 
 const initialState = {
 	numOfCakes: 10,
+	numberOfIceCreams: 20,
 };
 
 const reducer = (state = initialState, action) => {
@@ -20,6 +29,12 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				numOfCakes: state.numOfCakes - 1,
+			};
+
+		case BUY_ICECREAM:
+			return {
+				...state,
+				numberOfIceCreams: state.numberOfIceCreams - 1,
 			};
 		default:
 			return state;
@@ -33,4 +48,6 @@ const unsubscribe = store.subscribe(() => console.log('Updated State', store.get
 store.dispatch(buyCake());
 store.dispatch(buyCake());
 store.dispatch(buyCake());
+store.dispatch(buyIceCream());
+store.dispatch(buyIceCream());
 unsubscribe();
