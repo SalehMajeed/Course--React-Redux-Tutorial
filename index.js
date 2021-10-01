@@ -18,19 +18,53 @@ function buyIceCream() {
 	};
 }
 
-const initialState = {
+const initialCakeState = {
 	numOfCakes: 10,
+};
+
+const initialIceCreamState = {
 	numberOfIceCreams: 20,
 };
 
-const reducer = (state = initialState, action) => {
+
+// const initialState = {
+// 	numOfCakes: 10,
+// 	numberOfIceCreams: 20,
+// };
+
+
+// const reducer = (state = initialState, action) => {
+// 	switch (action.type) {
+// 		case BUY_CAKE:
+// 			return {
+// 				...state,
+// 				numOfCakes: state.numOfCakes - 1,
+// 			};
+
+// 		case BUY_ICECREAM:
+// 			return {
+// 				...state,
+// 				numberOfIceCreams: state.numberOfIceCreams - 1,
+// 			};
+// 		default:
+// 			return state;
+// 	}
+// };
+
+const cakeReducer = (state = initialCakeState, action) => {
 	switch (action.type) {
 		case BUY_CAKE:
 			return {
 				...state,
 				numOfCakes: state.numOfCakes - 1,
 			};
+		default:
+			return state;
+	}
+};
 
+const icecreamReducer = (state = initialIceCreamState, action) => {
+	switch (action.type) {
 		case BUY_ICECREAM:
 			return {
 				...state,
